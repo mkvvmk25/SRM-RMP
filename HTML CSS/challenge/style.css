@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.box {
+	width: 960px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: sans-serif;
+	/* margin: 10px; */
+	border: 5px solid black;
+}
+.head-box {
+	background-color: aliceblue;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.img-box {
+	width: 30%;
+}
+
+.btn {
+	padding: 10px 20px;
+	background-color: black;
+	color: white;
+	border: 0;
+	border-top: 5px solid black;
+	width: 100%;
+}
+.btn:hover {
+	background-color: white;
+	color: black;
+}
+
+li {
+	margin-left: 50px;
+}
+
+.shapes {
+	display: flex;
+	gap: 10px;
+}
+.sh {
+	width: 25px;
+	height: 25px;
+}
+.sh-1 {
+	background-color: aqua;
+}
+.sh-2 {
+	background-color: rgb(68, 255, 0);
+}
+.sh-3 {
+	background-color: rgb(140, 33, 167);
+}
+.sh-4 {
+	background-color: rgb(212, 255, 0);
+}
+.sh-5 {
+	background-color: rgb(155, 193, 193);
+}
+.sh-6 {
+	background-color: rgb(23, 41, 41);
+}
+.box 
+{
+    position: relative;
+}
+.sale-box {
+	background-color: red;
+    display: inline;
+    padding: 5px;
+    top: -15px;
+    left: -30px;
+    letter-spacing: 2px;
+    position: absolute;
+    
+}
