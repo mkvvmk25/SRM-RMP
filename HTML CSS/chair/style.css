@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section-1 {
+	margin-top: 50px;
+	display: grid;
+	margin-bottom: 50px;
+	grid-template-columns: 1fr 1fr;
+}
+.img-box-2-section-1 {
+	width: 100%;
+	border-radius: 5%;
+}
+.heading-section-1 {
+	font-size: 48px;
+	line-height: 0.9;
+	margin-bottom: 25px;
+	letter-spacing: 1px;
+}
+.des-section-1 {
+	line-height: 1.6;
+	margin-bottom: 25px;
+}
+.btn-section-1 {
+	border: 0;
+	background-color: green;
+	/* padding: 10px 16px;
+     */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 18px;
+}
+
+.box-1-section-1 {
+	margin-right: 25px;
+}
+
+.section-2 h2 {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+
+.svg-cont {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 15px;
+}
+
+.text-design {
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.design-section-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 5%;
+}
+
+.size-6 {
+	stroke: green;
+}
+
+.section-2 {
+	margin-bottom: 50px;
+}
+
+.section-3 {
+	border-radius: 20px;
+	margin-bottom: 200px;
+	background-color: green;
+	padding: 20px;
+	column-gap: 5%;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+.img-section-3 {
+	width: 100%;
+	border-radius: 16px;
+}
+.head-text-section-3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+.para-text-section-3 {
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.author-text-section-3 {
+}
+.card-1 {
+	width: 300px;
+}
+
+.img-card-1 {
+	width: 100%;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.svg-cont-card-1 {
+	width: 25px;
+}
+.svg-text-card-1 {
+	display: flex;
+	align-items: center;
+}
+
+.text-card-1,
+.price-cart {
+	padding: 25px;
+}
+.text-card-1 p:first-child {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.section-4 h2 {
+	margin-bottom: 20px;
+}
+
+.price-cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-1 {
+	background-color: aliceblue;
+	margin-bottom: 60px;
+}
+.svg-text-card-1 {
+	gap: 20px;
+	margin-bottom: 15px;
+}
+
+.svg-text-card-1:last-child {
+	margin-bottom: 0;
+}
+
+.btn-add-cart {
+	border: 0;
+	background-color: green;
+	padding: 12px 16px;
+	border-radius: 18px;
+	
+}
