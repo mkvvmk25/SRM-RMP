@@ -97,25 +97,104 @@
 // console.log(raj.getFisrtName());
 // console.log(raj.getAge());
 
-let PersonProto = {
-	aboutme() {
-		console.log(`${this.firstName}, ${this.age}`);
-	},
-	greet: function () {
-		console.log(`hi, ${this.firstName}`);
-	},
-	intitialiseProps(firstName, age) {
-		this.firstName = firstName;
-		this.age = age;
-	},
-};
+// let PersonProto = {
+// 	aboutme() {
+// 		console.log(`${this.firstName}, ${this.age}`);
+// 	},
+// 	greet: function () {
+// 		console.log(`hi, ${this.firstName}`);
+// 	},
+// 	intitialiseProps(firstName, age) {
+// 		this.firstName = firstName;
+// 		this.age = age;
+// 	}
+// };
 
-let raj = Object.create(PersonProto);
-raj.intitialiseProps("raj", 25);
-raj.greet();
-raj.aboutme();
+// let raj = Object.create(PersonProto);
+// raj.intitialiseProps("raj", 25);
+// raj.greet();
+// raj.aboutme();
+// console.log(raj);
+
+// Inheritance
+// using constructor function*****
+// ES6 classes
+// Object.create()
+
+// let Person = function (firstName, age) {
+// 	this.firstName = firstName;
+// 	this.age = age;
+// };
+
+// Person.prototype.propertyOne = 25;
+// Person.prototype.propertyTwo = 25;
+// Person.prototype.aboutMe = function () {
+// 	console.log(`${this.firstName}, ${this.age}`);
+// };
+
+// let Student = function (firstName, age, course) {
+//     // calling the parent class contructor
+//     // there is no inheritance happens because of below line
+// 	Person.call(this, firstName, age);
+//     this.course = course;
+// };
+
+// // linking prototypes
+// Student.prototype = Object.create(Person.prototype);
+
+// Student.prototype.skill = "hockey";
+// Student.prototype.play = function()
+// {
+//     console.log(`${this.firstName} plays ${this.skill}`);
+// }
+
+// let raj = new Student("raj", 20, "CSE");
+// console.log(raj);
+
+class PersonCl {
+	#age; // private field
+	#firstName; // private field
+
+	constructor(firstName, age) {
+		this.#firstName = firstName; // instialise
+		this.#age = age;
+	}
+
+	getAge() {
+		return this.#age;
+	}
+	setAge(age) {
+		this.#age = age;
+	}
+
+	getFisrtName() {
+		return this.#firstName;
+	}
+	setFirstName(k) {
+		this.#firstName = k;
+	}
+
+	aboutMe() {
+		console.log(`hi ${this.#firstName} , ${this.#age}`);
+	}
+	greet(msg) {
+		console.log(`${msg} ${this.#firstName}`);
+	}
+}
+
+class Student extends PersonCl {
+	constructor(firstName, age, course) {
+		super(firstName, age);
+		this.course = course;
+	}
+
+	play(msg) {
+		console.log(`${msg} ${this.getFisrtName()}`);
+	}
+}
+
+let raj = new Student("raj", 25, "CSE");
 console.log(raj);
 
+// Async Js 
 
-// 4.30 to 5PM Assessments 
-// Pls do practice what ever happened till Now....😁
