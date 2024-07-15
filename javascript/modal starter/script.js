@@ -44,3 +44,69 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+
+
+/*
+/* 
+    OOPS
+                    inheritance
+        encapsulation
+        polymorphism
+        abstraction
+
+
+    classes 
+        funtion constructor ***
+        ES6 classes 
+        object.create() 
+        
+*/
+let Person = function (fName, p_age) {
+	this.firstName = fName;
+	this.age = p_age;
+};
+
+Person.prototype.aboutMe = function () {
+	console.log(`i am ${this.firstName} ageof ${this.age}`);
+};
+
+Person.prototype.greetMe = function () {
+	console.log(`Hi, ${this.firstName}!!`);
+};
+
+let Student = function (fName, p_age, stuSkill) {
+	Person.call(this, fName, p_age); // function
+	this.skills = stuSkill;
+};
+
+Student.prototype = Person.prototype;
+Student.prototype.plays = function()
+{
+    console.log(this.greetMe(), this.skills);
+}
+
+
+
+let ExStudent = 
+function (fName, p_age, stuSkill, degree) {
+    Student.call(this, fName, p_age, stuSkill);
+	this.degree = degree;
+};
+ExStudent.prototype = Student.prototype; 
+ExStudent.prototype.graduate = function()
+{
+    this.greetMe();
+    console.log(` has graduated on ${this.degree}`);
+}
+
+let raj = new ExStudent("raj", 20, "singing", "CSE");
+console.log(raj);
+raj.graduate();
+
+
+
+
+
+
+*/
+
