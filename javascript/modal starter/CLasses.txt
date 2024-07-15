@@ -1,0 +1,106 @@
+// /*
+//     OOPS
+//                     inheritance
+//         encapsulation
+//         polymorphism
+//         abstraction
+
+//     classes
+//         funtion constructor ***
+//         ES6 classes
+//         object.create()
+
+// */
+// let Person = function (fName, p_age) {
+// 	this.firstName = fName;
+// 	this.age = p_age;
+// };
+
+// Person.prototype.aboutMe = function () {
+// 	console.log(`i am ${this.firstName} ageof ${this.age}`);
+// };
+
+// Person.prototype.greetMe = function () {
+// 	console.log(`Hi, ${this.firstName}!!`);
+// };
+
+// let Student = function (fName, p_age, stuSkill) {
+// 	Person.call(this, fName, p_age); // function
+// 	this.skills = stuSkill;
+// };
+
+// Student.prototype = Person.prototype;
+// Student.prototype.plays = function()
+// {
+//     console.log(this.greetMe(), this.skills);
+// }
+
+// let ExStudent =
+// function (fName, p_age, stuSkill, degree) {
+//     Student.call(this, fName, p_age, stuSkill);
+// 	this.degree = degree;
+// };
+// ExStudent.prototype = Student.prototype;
+// ExStudent.prototype.graduate = function()
+// {
+//     this.greetMe();
+//     console.log(` has graduated on ${this.degree}`);
+// }
+
+// let raj = new ExStudent("raj", 20, "singing", "CSE");
+// console.log(raj);
+// raj.graduate();
+
+// // https://bit.ly/CV-150724
+
+class Person 
+{
+	constructor(firstname, age) {
+		this.firstName = firstname;
+		this.age = age;
+	}
+
+	static staticMethod() {
+        // this -> undefined
+		console.log(`${this.firstName} i am static`);
+	}
+	aboutMe() {
+		console.log(`name: ${this.firstName} age:${this.age}`);
+	}
+	greetMe() {
+		console.log(`Hi, ${this.firstName}`);
+	}
+}
+
+class Student extends Person {
+	#goals;
+	#habbit;
+	constructor(firstname, age, skills) {
+        super(firstname, age);
+        this.skills = skills;
+		this.#goals = "tasks";
+		this.#habbit = "reading";
+	}
+	getGoals() {
+		return this.#goals;
+	}
+	setGoals(goal) {
+		this.#goals = goal;
+	}
+	getHabbit() {
+		return this.#habbit;
+	}
+	setHabbit(hab) {
+		this.#habbit = hab;
+	}
+
+	plays() {
+		console.log(`Hi, ${this.firstName} plays ${this.skills}`);
+	}
+}
+
+let raj = new Student("raj", 25, "football");
+Student.staticMethod();
+raj.setGoals("working");
+console.log(raj.getGoals());
+// console.log(raj.getGoals());
